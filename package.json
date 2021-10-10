@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "sync": "ccaj sync computerTable",
-    "links": "node imgLinks.js"
+    "ilinks": "node imgLinks.js",
+    "isync": "node imgSync.js"
   },
   "keywords": [],
   "author": "",

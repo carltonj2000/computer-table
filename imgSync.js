@@ -17,12 +17,9 @@ photos.src.images.forEach((image) => {
   if (!fs.existsSync(s)) {
     return console.log(`Warning! ${image} not found`);
   }
-  const dd = path.join(__dirname, photos.destDir);
-  if (!fs.existsSync(dd)) {
-    fs.mkdirSync(dd, { recursive: true });
-  }
-  const d = path.join(dd, image);
-  const ln = `ln -s ${s} ${d}`;
+
+  const d = path.join(photos.src.appsfortracking.basedir, image);
+  const ln = `rsync -avz ${s} carltonjoseph.com:${d}`;
   execSync(ln);
   console.log(ln);
 });
