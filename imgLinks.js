@@ -13,7 +13,10 @@ if (!src) {
   process.exit(-1);
 }
 photos.src.images.forEach((image) => {
-  const s = path.join(src.basedir, image);
+  const s =
+    os.hostname() !== "appsfortracking"
+      ? path.join(src.basedir, image)
+      : path.join(src.linkdir, image);
   if (!fs.existsSync(s)) {
     return console.log(`Warning! ${image} not found`);
   }
