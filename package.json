@@ -1,0 +1,14 @@
+{
+  "name": "computer-table",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "sync": "ccaj sync computerTable",
+    "links": "node imgLinks.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
